@@ -1,0 +1,114 @@
+:root {
+    /* Primary colors */
+
+    --crl-strong-cyan: 171, 66%, 44%;
+    --crl-light-blue: 233, 100%, 69%;
+    
+    /* Neutral colors */
+
+    --crl-dark-grayish-blue: 210, 10%, 33%;
+    --crl-grayish-blue: 201, 11%, 66%;
+  }
+
+  /* GENERAL STYLES */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, 
+body {
+  scroll-behavior: smooth;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 1.125rem;
+  color: hsl(var(--crl-grayish-blue));
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+            /* Header */
+.wrapper {
+    display: grid;
+    padding: 2rem 10%;
+    min-height: 100vh;
+}
+.header-section {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    background-image: url(images/bg-header-desktop.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 10%;
+    
+    /* gap: 2rem; */
+}
+.logo {
+    width: 5rem;
+}
+main,
+footer {
+    padding: 0 10%;
+    text-align: center;
+   
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.hero-section-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: hsl(var(--crl-dark-grayish-blue));
+    margin-bottom: .7rem;
+}
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: hsl(var(--crl-dark-grayish-blue));
+    margin-bottom: .7rem;
+}
+.section-text {
+    font-size: .8rem;
+    width: 28rem;
+    margin-bottom: 2rem; 
+}
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+button {
+    padding:.7rem 1.2rem;
+    border: 0;
+    border-radius: 25px;
+    color: #fff;
+    font-size: .7rem;
+}
+.btn-ios {
+    background-color: hsl(var(--crl-strong-cyan));
+}
+.btn-mac {
+    background-color: hsl(var(--crl-light-blue));
+}
+
+.section-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
