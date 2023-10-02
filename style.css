@@ -384,30 +384,3 @@ footer .links {
         margin-right: 3.5rem;
     }
 }
-
-@media (max-width: 480px) {
-
-    /* showcase section */
-
-    /* .showcase {
-        text-align: center;
-        margin-top: -8rem;
-    } */
-
-    /* Truck Section */
-
-    /* section.truck {
-        padding: 3rem 12% !important;
-    } */
-
-    /* .section-col {
-        display: flex;
-        padding-top: 2rem;
-        gap: 3rem;
-    } */
-
-    /* .section-img {
-        margin-top: 3rem;
-        width: 100%;
-    } */
-}
