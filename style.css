@@ -1,5 +1,6 @@
 :root {
-    /* Primary colors */
+    
+    /* Primary colors  */
 
     --crl-strong-cyan: 171, 66%, 44%;
     --crl-light-blue: 233, 100%, 69%;
@@ -8,24 +9,31 @@
 
     --crl-dark-grayish-blue: 210, 10%, 33%;
     --crl-grayish-blue: 201, 11%, 66%;
+    --btn-shadow-cyan: hsla(171, 66%, 36%, 0.5);
+    --btn-shadow-blue: hsla(233, 100%, 65%, 0.5);
   }
 
-  /* GENERAL STYLES */
+  /* General Styling */
 
-*,
+  *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all .2s linear;
 }
 
 html, 
 body {
   scroll-behavior: smooth;
   font-family: 'Bai Jamjuree', sans-serif;
-  font-size: 1.125rem;
+  font-size: 62.5%;
   color: hsl(var(--crl-grayish-blue));
+  line-height: 1.5;
 }
 
 img,
@@ -33,82 +41,363 @@ svg {
   display: block;
   max-width: 100%;
 }
+
 a {
     text-decoration: none;
+    color: hsl(var(--crl-dark-grayish-blue));
+    font-size: .7rem;
 }
 
-            /* Header */
-.wrapper {
-    display: grid;
-    padding: 2rem 10%;
-    min-height: 100vh;
+
+header {
+    padding: 8rem 10%;
 }
-.header-section {
+
+section {
+    padding: 3rem 10%;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section-content{
+    max-width: 55rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: hsl(var(--crl-dark-grayish-blue));
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;    
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+
+/* Header Sectioin */
+
+header {
+    background: url(images/bg-header-desktop.png) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    text-align: center;
+}
+
+.header-logo {
+    width: 15rem;
+    margin: auto;
+}
+
+/* Showcase section */
+
+.showcase {
+    margin-top: -6rem;
+}
+
+.showcase h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.buttons {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding:1.5rem 4rem;
+    border: 0;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-ios {
+    background-color: hsl(var(--crl-strong-cyan));
+    margin-right: 2rem;
+    box-shadow: 0 10px 30px -5px var(--btn-shadow-cyan);
+}
+
+.btn-mac {
+    background-color: hsl(var(--crl-light-blue));
+    box-shadow: 0 10px 30px -5px var(--btn-shadow-blue);
+}
+
+button:hover { 
+    opacity: .9;
+}
+
+/* Truck section */
+
+section.truck {
+    padding: 3rem 2% !important;
+}
+
+.section-col {
+    display: flex;
+    padding-top: 2rem;
+    gap: 8rem;
+    margin-top: 2rem;
+}
+.section-left {
+    overflow: hidden;
+}
+
+.section-left img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.section-right {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    place-items: center;
-    text-align: center;
-    background-image: url(images/bg-header-desktop.png);
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-position: center;
-    padding: 4rem 10%;
+    padding: 2rem 0rem;
+    justify-content: center;
+    align-self: center;
+    text-align: start;
+}
+
+.card {
+    width: 30rem;
+    margin-bottom: 3rem;
     
-    /* gap: 2rem; */
 }
-.logo {
-    width: 5rem;
+.section-right h3 {
+    
+    text-align: start !important;
 }
-main,
-footer {
-    padding: 0 10%;
+
+/* access section */
+
+.access-img {
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+/* supercharge section */
+
+.section-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     text-align: center;
-   
+    margin-top: 4rem;
 }
-.section {
+
+.box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem;
+    padding: 1rem;
+    
 }
-.hero-section-title {
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: hsl(var(--crl-dark-grayish-blue));
-    margin-bottom: .7rem;
+
+.box img {
+    margin-bottom: 2.5rem;
 }
-.section-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: hsl(var(--crl-dark-grayish-blue));
-    margin-bottom: .7rem;
-}
-.section-text {
-    font-size: .8rem;
-    width: 28rem;
-    margin-bottom: 2rem; 
-}
-.buttons {
+
+/*  Icon section */
+
+.icons {
     display: flex;
-    gap: 1rem;
-}
-button {
-    padding:.7rem 1.2rem;
-    border: 0;
-    border-radius: 25px;
-    color: #fff;
-    font-size: .7rem;
-}
-.btn-ios {
-    background-color: hsl(var(--crl-strong-cyan));
-}
-.btn-mac {
-    background-color: hsl(var(--crl-light-blue));
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.section-col {
+.icon {
+    margin:0 3rem 5rem 0;
+}
+
+/* Footer section */
+
+ footer {
+    padding: 3rem 10%;
+    background-color: hsl(var(--crl-grayish-blue), .1);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(150px, 1fr) 4fr minmax(170px, 1fr);
 }
 
+.footer-logo {
+    width: 5rem;
+}
+
+footer .links {
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 120px));
+    gap: 2rem;
+}
+
+.links a {
+    color: hsl(var(--crl-dark-grayish-blue));
+    font-size: 1.5rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: hsl(var(--crl-strong-cyan));
+}
+.social-media a {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.social-media .fa-square-facebook:hover {
+    color: hsl(var(--crl-light-blue));
+    transform: scale(1.2);
+}
+.social-media .fa-twitter:hover {
+    color: hsl(var(--crl-strong-cyan));
+    transform: scale(1.2);
+
+}
+.social-media .fa-instagram:hover {
+    transform: scale(1.2);
+    color: #b128d7;
+}
+
+/* Media Quries */
+
+@media (max-width: 768px) {
+
+    /* Header Section */
+
+    header {
+        background: url(images/bg-header-mobile.png) no-repeat;
+        background-size: cover;
+        margin-bottom: 3rem;
+    }
+
+    /* showcase section */
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;  
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .btn-ios {
+        margin-right: 0;
+    }
+
+    /* Truck section */
+
+    .section-col {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-left,
+    .section-right {
+        width: 100%;
+    }
+
+    .section-right {
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-right h3 {
+    
+        text-align: center !important;
+    }
+
+    /* Suppercharge Section */
+
+    .box {
+        margin-bottom: 5rem;
+    }
+
+    /* Icons section */
+
+    .icons {
+        flex-direction: column;
+    }
+
+    /* Footer section */
+
+    footer {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .footer-logo {
+        margin-bottom: 5rem;
+    }
+
+    footer .links {
+       
+        grid-template-columns: 1fr;
+        text-align: center;
+       
+    }
+
+    footer .links a {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .social-media {
+        margin-top: 2rem;
+    }
+
+    .social-media a {
+        font-size: 3.5rem;
+        margin-right: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* showcase section */
+
+    .showcase {
+        text-align: center;
+        margin-top: -8rem;
+    }
+
+    /* Truck Section */
+
+    section.truck {
+        padding: 3rem 12% !important;
+    }
+
+    .section-col {
+        display: flex;
+        padding-top: 2rem;
+        gap: 3rem;
+    }
+
+    .section-img {
+        margin-top: 3rem;
+        width: 100%;
+    }
+}
