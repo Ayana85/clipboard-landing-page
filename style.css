@@ -305,6 +305,10 @@ footer .links {
 
     /* Truck section */
 
+    section.truck {
+        padding: 3rem 12% !important;
+    }
+
     .section-col {
         flex-direction: column;
         text-align: center;
@@ -329,6 +333,12 @@ footer .links {
     .section-right h3 {
     
         text-align: center !important;
+    }
+
+    /* Access Section */
+
+    .access-img {
+        width: 100%;
     }
 
     /* Suppercharge Section */
@@ -379,25 +389,25 @@ footer .links {
 
     /* showcase section */
 
-    .showcase {
+    /* .showcase {
         text-align: center;
         margin-top: -8rem;
-    }
+    } */
 
     /* Truck Section */
 
-    section.truck {
+    /* section.truck {
         padding: 3rem 12% !important;
-    }
+    } */
 
-    .section-col {
+    /* .section-col {
         display: flex;
         padding-top: 2rem;
         gap: 3rem;
-    }
+    } */
 
-    .section-img {
+    /* .section-img {
         margin-top: 3rem;
         width: 100%;
-    }
+    } */
 }
